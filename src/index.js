@@ -6,7 +6,7 @@ var write = function(string) {
     return paper;
 }
 
-var pencil = function(string) {
+var pointDegradation = function(string) {
     var durability = string.length;
     var characterArray = [];
 
@@ -31,5 +31,5 @@ var pencil = function(string) {
 
 module.exports = {
     write: write,
-    pencil: pencil
+    pointDegradation: pointDegradation
 };

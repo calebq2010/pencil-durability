@@ -25,8 +25,8 @@ describe("pencil durability kata - point degradation", function() {
         expect(methods.pointDegradation("text", 10)).to.equal(6);
     });
 
-    xit("should have a pencil with a point durability of four write the string Tex", function() {
-        expect(methods.pointDegradation("Text")).to.equal("Tex");
+    it("should have a pencil durability of 5 when Text is written", function() {
+        expect(methods.pointDegradation("Text", 10)).to.equal(5);
     });
 
     xit("should have a pencil with a point durability of nine write the string apple pie and ignore spacing", function() {

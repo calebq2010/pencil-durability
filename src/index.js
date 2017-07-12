@@ -6,7 +6,13 @@ var write = function(string) {
     return paper;
 }
 
+var pencil = function(durability) {
+    return "text";
+}
 
 
 
-module.exports = write;
+module.exports = {
+    write: write,
+    pencil: pencil
+};

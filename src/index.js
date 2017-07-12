@@ -2,6 +2,7 @@ var paper = "";
 
 var write = function(string) {
     paper += string;
+    pointDegradation(string);
 
     return paper;
 }
@@ -9,6 +10,16 @@ var write = function(string) {
 var pointDegradation = function(string, durability) {
     var durability = durability;
     var characterArray = [];
+
+    if (durability === 0) {
+        var spaceArray = [];
+
+        for (i = 0; i < string.length; i++) {
+            spaceArray.push(" ");
+        }
+
+        return spaceArray.join('');
+    }
 
     for (i = 0; i < string.length; i++) {
         var character = string[i];

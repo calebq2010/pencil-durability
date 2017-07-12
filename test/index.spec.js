@@ -29,11 +29,20 @@ describe("pencil durability kata - point degradation", function() {
         expect(methods.pointDegradation("Text", 10)).to.equal(5);
     });
 
-    xit("should have a pencil with a point durability of nine write the string apple pie and ignore spacing", function() {
-        expect(methods.pointDegradation("apple pie")).to.equal("apple pie");
+    it("should have a pencil durability of 2 when apple pie is written", function() {
+        expect(methods.pointDegradation("apple pie", 10)).to.equal(2);
     });
 
-    xit("should have a pencil with a point durability of nine write the string Apple  and ignore spacing", function() {
-        expect(methods.pointDegradation("Apple Pie")).to.equal("Apple");
+    it("should have a pencil durability of 2 when Apple Pie is written", function() {
+        expect(methods.pointDegradation("Apple Pie", 12)).to.equal(2);
     });
+
+    it("should have a pencil durability of 2 when Apple Pie is written", function() {
+        expect(methods.pointDegradation("Apple Pie", 12)).to.equal(2);
+    });
+
+    it("should return empty string with three spaces when pie is written with zero durability", function() {
+        expect(methods.pointDegradation("pie", 0)).to.equal("   ");
+    });
+
 });

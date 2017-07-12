@@ -21,11 +21,19 @@ describe("pencil duribility kata - write", function() {
 
 describe("pencil durability kata - point degradation", function() {
 
-    it("should have a pencil with a point durability of four write the string text", function() {
-        expect(methods.pointDegradation("text")).to.equal("text");
+    it("should have a pencil durability of six when text is written", function() {
+        expect(methods.pointDegradation("text", 10)).to.equal(6);
     });
 
-    it("should have a pencil with a point durability of four write the string Tex", function() {
+    xit("should have a pencil with a point durability of four write the string Tex", function() {
         expect(methods.pointDegradation("Text")).to.equal("Tex");
+    });
+
+    xit("should have a pencil with a point durability of nine write the string apple pie and ignore spacing", function() {
+        expect(methods.pointDegradation("apple pie")).to.equal("apple pie");
+    });
+
+    xit("should have a pencil with a point durability of nine write the string Apple  and ignore spacing", function() {
+        expect(methods.pointDegradation("Apple Pie")).to.equal("Apple");
     });
 });

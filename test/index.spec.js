@@ -22,6 +22,10 @@ describe("pencil duribility kata - write", function() {
 describe("pencil durability kata - point degradation", function() {
 
     it("should have a pencil with a point durability of four write the string text", function() {
-        expect(methods.pencil(4)).to.equal("text");
+        expect(methods.pencil("text")).to.equal("text");
+    });
+
+    it("should have a pencil with a point durability of four write the string Tex", function() {
+        expect(methods.pencil("Text")).to.equal("Tex");
     });
 });

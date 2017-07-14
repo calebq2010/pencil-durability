@@ -1,10 +1,13 @@
 var paper = "";
 
-var write = function(string) {
+var write = function(string, durability) {
     paper += string;
-    pointDegradation(string);
+    var point = pointDegradation(string, durability);
 
-    return paper;
+    return {
+        paper: paper,
+        point: point
+    };
 }
 
 var pointDegradation = function(string, durability) {

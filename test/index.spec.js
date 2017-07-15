@@ -25,28 +25,24 @@ describe("pencil durability kata - point degradation", function() {
         expect(methods.write("text", 10)).to.have.property("point", 6);
     });
 
-    // it("should have a pencil durability of 5 when Text is written", function() {
-    //     expect(methods.pointDegradation("Text", 10)).to.equal(5);
-    // });
+    it("should have a pencil durability of 5 when Text is written", function() {
+        expect(methods.write("Text", 10)).to.have.property("point", 5);
+    });
 
-    // it("should have a pencil durability of 2 when apple pie is written", function() {
-    //     expect(methods.pointDegradation("apple pie", 10)).to.equal(2);
-    // });
+    it("should have a pencil durability of 2 when apple pie is written", function() {
+        expect(methods.write("apple pie", 10)).to.have.property("point", 2);
+    });
 
-    // it("should have a pencil durability of 2 when Apple Pie is written", function() {
-    //     expect(methods.pointDegradation("Apple Pie", 12)).to.equal(2);
-    // });
+    it("should have a pencil durability of 2 when Apple Pie is written", function() {
+        expect(methods.write("Apple Pie", 12)).to.have.property("point", 2);
+    });
 
-    // it("should have a pencil durability of 2 when Apple Pie is written", function() {
-    //     expect(methods.pointDegradation("Apple Pie", 12)).to.equal(2);
-    // });
+    it("should return empty string with three spaces when pie is written with zero durability", function() {
+        expect(methods.write("pie", 0)).to.have.property("point", "   ");
+    });
 
-    // it("should return empty string with three spaces when pie is written with zero durability", function() {
-    //     expect(methods.pointDegradation("pie", 0)).to.equal("   ");
-    // });
-
-    // it("should return string with the letter p and two spaces when pie is written with 1 durability", function() {
-    //     expect(methods.write(pointDegradation("pie", 1))).to.equal("p  ");
-    // });
+    it("should return string with the letter p and two spaces when pie is written with 1 durability", function() {
+        expect(methods.write("pie", 1)).to.have.property("paper", "p  ");
+    });
 
 });
